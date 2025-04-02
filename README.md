@@ -51,6 +51,7 @@ Abra um terminal Powershell:
 
 execute: python visualizar_dados.py 
 
+dentro da pasta Dados irá conter 2 arquivos .csv com os dados da camada prata e ouro
 
 ## Monitoramento
 
@@ -67,3 +68,4 @@ Você pode modificar:
 * Número de páginas da API (em `executar_pipeline.py`)
 * Regras de qualidade (em `verificacao_qualidade_dados.py`)
 * Estrutura de saída (em `executar_pipeline.py`)
+*
