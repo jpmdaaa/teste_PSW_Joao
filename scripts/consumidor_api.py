@@ -16,7 +16,6 @@ class ConsumidorAPICervejarias:
         })
         
     def buscar_cervejarias(self, pagina: int = 1, por_pagina: int = 20) -> List[Dict]:
-        """Busca dados de cervejarias da API com paginacao"""
         try:
             params = {'page': pagina, 'per_page': por_pagina}
             response = self.session.get(self.URL_BASE, params=params, timeout=10)
@@ -45,7 +44,7 @@ class ConsumidorAPICervejarias:
             return []
     
     def buscar_todas_cervejarias(self, max_paginas: int = 20) -> List[Dict]:
-        """Busca todas as cervejarias disponiveis com paginacao"""
+        """Busca todas as cervejarias disponiveis"""
         todas_cervejarias = []
         pagina = 1
         
