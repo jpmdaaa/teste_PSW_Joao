@@ -1,0 +1,17 @@
+# Dados gerados
+/datalake/
+/dados/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.so
+.Python
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Ambiente virtual
+venv/
+env/
