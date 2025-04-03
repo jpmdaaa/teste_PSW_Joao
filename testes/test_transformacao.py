@@ -1,5 +1,16 @@
 import os
 import sys
+import pytest
+import sys
+import locale
+
+# Configura a codificação padrão
+locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
+
+
+
 os.environ['PYSPARK_PYTHON'] = 'python'
 os.environ['PYSPARK_DRIVER_PYTHON'] = 'python'
 

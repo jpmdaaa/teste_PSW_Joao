@@ -138,6 +138,7 @@ class PipelineInterface:
                     shell=True,
                     text=True,
                     encoding='utf-8',
+                    errors='replace',
                     env=env
                             )
                 

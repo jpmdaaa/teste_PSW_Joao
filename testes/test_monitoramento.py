@@ -4,7 +4,15 @@ import unittest
 from datetime import datetime
 from unittest.mock import patch
 import logging
+import pytest
+import sys
+import locale
 
+
+# Configura a codificação padrão
+locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 class TestMonitorPipeline(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
