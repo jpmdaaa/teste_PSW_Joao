@@ -1,8 +1,10 @@
 import pandas as pd
 from pathlib import Path
 import matplotlib.pyplot as plt
+import sys
+import os  
 
-# Configurações dos caminhos (Windows/Docker compatible)
+# Configuracoes dos caminhos (Windows/Docker compatible)
 BASE_DIR = Path(__file__).parent / "dados"
 CAMADAS = {
     "bronze": BASE_DIR / "bronze",
@@ -47,7 +49,11 @@ def salvar_analises(df, camada):
         print(f"📈 Gráfico salvo em: {BASE_DIR}/grafico_paises_{camada}.png")
 
 def main():
-    print("\n🔍 Visualizador do Pipeline de Cervejarias")
+    # Configura a codificação padrão para UTF-8
+    sys.stdout.reconfigure(encoding='utf-8')
+    
+    print("\nVisualizador do Pipeline de Cervejarias")
+    print("="*40)
     
     # Carrega e exibe ambas as camadas
     df_prata = carregar_dados(CAMADAS["prata"])
