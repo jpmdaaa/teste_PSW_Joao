@@ -1,4 +1,5 @@
 
+
 # Pipeline de Dados para Cervejarias 🍺
 
 Este projeto implementa um pipeline completo de dados que coleta informações de cervejarias da Open Brewery DB API, processa e armazena em um data lake seguindo a arquitetura bronze, prata, ouro, com interface gráfica para controle.
@@ -33,6 +34,8 @@ teste_PSW_jpm/
 │ ├── test_transformacao.py # Testes de transformação
 │ ├── test_verificacao_qualidade.py # Testes de qualidade
 │ └── test_monitoramento.py # Testes de monitoramento
+├── dags/
+│ └── cervejarias_pipeline.py # Pipeline Airflow
 ├── executar_pipeline.py # Script principal
 ├── interface_pipeline.py # Interface gráfica
 ├── visualizar_dados.py # Visualização de resultados
@@ -58,7 +61,20 @@ powershell
 
 python interface_pipeline.py
 
-### Opção 2: Execução Local (Para desenvolvimento)
+### Opção 2: Execução com Airflow (Para orquestração)
+
+1. **Iniciar os containers** :
+
+powershell
+
+docker-compose up -d
+
+2. **Acessar a interface do Airflow** :
+   Acesse `http://localhost:8080` no navegador (usuário: admin, senha: admin)
+3. **Ativar o DAG** :
+   Na interface do Airflow, ative o DAG `cervejarias_pipeline` que será executado diariamente
+
+### Opção 3: Execução Local (Para desenvolvimento)
 
 1. **Configurar ambiente virtual** :
 
@@ -79,6 +95,7 @@ python executar_pipeline.py
 powershell
 
 python interface_pipeline.py
+
 
 ## 🖥️ Interface Gráfica
 
